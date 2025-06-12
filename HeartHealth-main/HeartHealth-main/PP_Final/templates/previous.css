@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+.container {
+    /* font-family: Arial, sans-serif; */
+    margin: 90px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid  #333;
+    border-radius:4px ;
+
+  }
+
+  th, td {
+    /* border: 1px solid #333; */
+    padding: 12px;
+    text-align: left;
+
+  }
+
+  th {
+    background-color: #333;
+    color: #f2f2f2;
+  }
+  .sno, .ans
+  {
+      width:25px;
+      text-align: center;
+  }
+
+  /* Responsive styles */
+  @media only screen and (max-width: 600px) {
+    th, td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    th {
+      text-align: center;
+    }
+  }
+
+
+  #register-button
+  {
+      border: 1px solid #333;
+      background-color: gray;
+      border-radius: 5px;
+  }
+  .nav-item{
+      float: right;
+      margin-left: 20px;
+  }
+  
+  .nav-link{
+      display: block;
+      margin-left: 20px;
+  }
+  #nav-item-1{
+      margin-left: 50vw;
+  }
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-heading, .date {
+  margin: 0;
+}
+.probability
+{
+    margin: 30px;
+}
+.probability span
+{
+    color: #333; 
+    border: 2px solid gray;
+    border-radius: 6px;
+    background-color: gray; 
+    padding: 4px;
+}
+
+.sugg-btn
+{
+  /* margin: 20px; */
+  margin-top: 40px;
+}

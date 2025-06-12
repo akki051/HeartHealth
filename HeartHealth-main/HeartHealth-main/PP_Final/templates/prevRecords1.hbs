@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PulseProsper</title>
+   <link rel="icon" type="image/png" href="logoimage.png">
+   <link rel="stylesheet" href="previous.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+</head>
+
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-color: #333;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="/logoimage.png" width="50px" height="50px"
+            alt="PuslseProper"></a>
+        <p style="color: white; margin-top: 15px;">PulseProper</p>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="/profile" style="color: white; margin-left:800px;">Profile</a></li>
+            <li class="nav-item"><a class="nav-link" href="/" id="register-button" style="color: white;">SIGN OUT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="heading">
+      <h2 class="main-heading">PREVIOUS RECORDS</h2>
+      <p class="date">Date: {{ entry.date }}</p>
+    </div>
+
+    <div class="probability">
+      <h3 class="section__header" style="text-align: center;">Assessment of Heart Disease Risk: <span
+        style="font-weight: bold;">{{entry.formValues.pythonOutput}}%</span>
+      </h3>
+    </div>
+    <p id="value" style="text-align: left;">
+      {{!-- Heart risk percentage varies based on individual factors, but lifestyle choices can influence up to <span
+        style="color:red; font-weight: bold;">{{entry.formValues.pythonOutput}}%</span> of the likelihood of developing cardiovascular issues. --}}
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th class="sno">S.No</th>
+          <th>Questions</th>
+          <th class="ans">Answer</th>
+        </tr>
+       </thead>
+       <tbody>
+                <tr>
+                    <td class="sno">1</td>
+                    <td>Has a doctor, nurse, or other health professional ever informed you that you have high blood pressure?</td>
+                    <td class="ans">{{ entry.formValues.HighBP }}</td>
+                </tr>
+                <tr>
+                    <td class="sno">2</td>
+                    <td>Have you ever been told by a doctor, nurse, or other health professional that your blood cholesterol is high?</td>
+                    <td class="ans">{{ entry.formValues.HighChol }}</td>
+                </tr>
+                <tr>
+                    <td class="sno">3</td>
+                    <td>Did you have a cholesterol check within the past five years?</td>
+                    <td class="ans">{{ entry.formValues.CholCheck }}</td>
+                </tr>
+                <tr>
+                    <td class="sno">4</td>
+                    <td>Have you smoked at least 100 cigarettes in your entire life?</td>
+                    <td class="ans">{{ entry.formValues.Smoker }}</td>
+                </tr>
+                <tr>
+                    <td class="sno">5</td>
+                    <td>Have you ever been told that you had a stroke?</td>
+                    <td class="ans">{{ entry.formValues.Stroke }}</td>
+                </tr>
+                <tr>
+                    <td class="sno">6</td>
+                    <td>Have you ever been told that you have diabetes?</td>
+                    <td class="ans">{{ entry.formValues.Diabetes }}</td>
+                </tr>
+                <tr>
+                    <td class="sno">7</td>
+                    <td>In the past 30 days, have you engaged in any physical activity or exercise other than your regular job?</td>
+                    <td class="ans">{{ entry.formValues.PhysActivity }}</td>
+                </tr>
+                <tr>
+                    <td class="sno">8</td>
+                    <td>On average, do you consume fruits at least once a day?</td>
+                    <td class="ans">{{ entry.formValues.Fruits }}</td>
+                </tr>
+                <tr>
+                    <td class="sno">9</td>
+                    <td>On average, do you consume vegetables at least once a day?</td>
+                    <td class="ans">{{ entry.formValues.Veggies }}</td>
+                </tr>
+                <tr>
+                    <td class="sno">10</td>
+                    <td>Are you classified as a heavy drinker? (Men having more than 14 drinks per week, and women having more than 7 drinks per week)</td>
+                    <td class="ans">{{ entry.formValues.HvyAlcoholConsump }}</td>
+                </tr>
+                <tr>
+                    <td class="sno">11</td>
+                    <td>How would you describe your general health? (Choose b/w 1 and 5, 1 being best and 5 being worst.)</td>
+                    <td class="ans">{{ entry.formValues.GenHlth }}</td>
+                </tr>
+                <tr>
+                    <td class="sno">12</td>
+                    <td>In the past 30 days, for how many days was your mental health not good?</td>
+                    <td class="ans">{{ entry.formValues.MentHlth }}</td>
+                </tr>
+                <tr>
+                    <td class="sno">13</td>
+                    <td>In the past 30 days, for how many days was your physical health not good?</td>
+                    <td class="ans">{{ entry.formValues.PhysHlth }}</td>
+                </tr>
+                <tr>
+                    <td class="sno">14</td>
+                    <td>Do you have serious difficulty walking or climbing stairs?</td>
+                    <td class="ans">{{ entry.formValues.DiffWalk }}</td>
+                </tr>
+                <tr>
+                    <td class="sno">15</td>
+                    <td>Biological sex?</td>
+                    <td class="ans">{{ entry.formValues.Sex }}</td>
+                </tr>
+                <tr>
+                    <td class="sno">16</td>
+                    <td>Age?</td>
+                    <td class="ans">{{ entry.formValues.Age }}</td>
+                </tr>
+                <tr>
+                    <td class="sno">17</td>
+                    <td>What is your Height (meters) ?</td>
+                    <td class="ans">{{ entry.formValues.Height }}</td>
+                </tr>
+                <tr>
+                    <td class="sno">18</td>
+                    <td>What is your current weight(KG) ?</td>
+                    <td class="ans">{{ entry.formValues.Weight }}</td>
+                </tr>
+        </tbody>
+        </table>
+
+        
+        <h3 class="sugg-btn">
+    To view your Suggestions:
+    {{!-- <a href="#" onclick="updateSuggestionLink(){{entry.formValues.pythonOutput}}" class="btn-link">
+        <button type="submit" id="submit" class="btn"
+                style="border: 1px solid #333;background-color: #333;border-radius: 5px;text-decoration: none;padding: 8px 15px; color: aliceblue; font-weight: bold;">
+            CLICK HERE
+        </button>
+    </a> --}}
+    <a href="/sugg" class="btn-link">
+            <button type="submit" id="submit" class="btn"
+                style="border: 1px solid #333;background-color: #333;border-radius: 5px;text-decoration: none;padding: 8px 15px; color: aliceblue; font-weight: bold;">
+                CLICK HERE
+            </button>
+        </a>
+</h3>
+
+
+  <script>
+      function updateSuggestionLink() {
+        var pythonOutputValue = {{entry.formValues.pythonOutput}}; // Replace with the actual value
+
+        // Set different href based on the value of pythonOutput
+        if (pythonOutputValue <= 25) {
+            window.location.href = "/sugg1",;
+        } else if (pythonOutputValue <= 50) {
+            window.location.href = "/sugg2";
+        } else if (pythonOutputValue <= 75) {
+            window.location.href = "/sugg3";
+        } else {
+            window.location.href = "/sugg4";
+        }
+    }
+</script>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
